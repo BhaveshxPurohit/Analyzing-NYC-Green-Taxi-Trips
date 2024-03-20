@@ -132,7 +132,6 @@ The analysis of cab demand unveils distinct patterns across various neighborhood
 
 The fare amount typically aligns with the distance covered during a trip, exhibiting a general pattern of increase. However, upon closer examination of the dataset, anomalies become apparent, particularly instances where the fare amount significantly surpasses the expected cost for a given distance. There were numerous trips where the fare amount spiked to as high as $500, despite the distance being relatively short, approximately 5-6 miles. These anomalies suggest potential irregularities or factors beyond distance that influence fare calculations, necessitating further investigation into the specific conditions or variables contributing to these unusually high fares for comparatively short distances.
 
-![image](https://github.com/BhaveshxPurohit/Analyzing-NYC-Green-Taxi-Trips/blob/6a352ec85e810156c9180aa5f22b070a2a065b58/Assests/15.png)
 
 ### 10. Distance VS Pickup Hour
 
