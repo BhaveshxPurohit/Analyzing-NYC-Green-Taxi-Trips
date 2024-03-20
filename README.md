@@ -132,6 +132,7 @@ The analysis of cab demand unveils distinct patterns across various neighborhood
 
 The fare amount typically aligns with the distance covered during a trip, exhibiting a general pattern of increase. However, upon closer examination of the dataset, anomalies become apparent, particularly instances where the fare amount significantly surpasses the expected cost for a given distance. There were numerous trips where the fare amount spiked to as high as $500, despite the distance being relatively short, approximately 5-6 miles. These anomalies suggest potential irregularities or factors beyond distance that influence fare calculations, necessitating further investigation into the specific conditions or variables contributing to these unusually high fares for comparatively short distances.
 
+![image](https://github.com/BhaveshxPurohit/Analyzing-NYC-Green-Taxi-Trips/blob/6a352ec85e810156c9180aa5f22b070a2a065b58/Assests/15.png)
 
 ### 10. Distance VS Pickup Hour
 
@@ -139,26 +140,35 @@ The fare amount typically aligns with the distance covered during a trip, exhibi
 
 The data predominantly clusters within trip distances ranging from 1.28 to 3.60 miles. Interestingly, the average trip distance throughout the day consistently hovers around 3 to 3.5 miles. Notably, there's a steady trend of trip distances increasing from the early morning until the evening. However, during the early and late night hours, there's a noticeable uptick in the distance covered by taxi trips. This shift suggests evolving travel patterns or preferences across different times of the day, potentially indicating longer rides or varying travel behaviors among passengers during these hours.
 
+### 11. Trip Distance vs Hours 
+
+Over the course of a day, the trip distance demonstrates a notable peak, reaching its highest point in the early hours at 5 AM with distances over 4.5 miles. This rise in trip distance could be linked to specific early-morning travel needs, such as commutes to airports or the beginning of long-distance journeys, especially evident at dawn.
+
 ![image](https://github.com/BhaveshxPurohit/Analyzing-NYC-Green-Taxi-Trips/blob/6a352ec85e810156c9180aa5f22b070a2a065b58/Assests/16.png)
 
-### 11. Fare Amount VS Week Day
+### 12. Fare Amount VS Week Day
 
 Over the course of the week, the fare range demonstrates a steady increase, reaching its highest point on Saturday at $14.20. This upward trend in fares could be attributed to heightened demand, shifts in travel behavior, or an influx of longer trips, particularly on Saturdays.
 
 ![image](https://github.com/BhaveshxPurohit/Analyzing-NYC-Green-Taxi-Trips/blob/6a352ec85e810156c9180aa5f22b070a2a065b58/Assests/17.png)
 
-### 12. Tip Amount VS Hours
+### 13. Tip Amount VS Hours
 
 A significant increase in tips occurs around the 5th hour, followed by a decline, stabilizing between $1.50 and $2.00 until approximately the 15th hour. Subsequently, there's a gradual uptick in tip amounts, peaking around the 20th hour. These fluctuations underscore diverse tipping patterns associated with the pickup hour.
 
 ![image](https://github.com/BhaveshxPurohit/Analyzing-NYC-Green-Taxi-Trips/blob/6a352ec85e810156c9180aa5f22b070a2a065b58/Assests/18.png)
 
-### 13. Tip Amount VS Week Day
+### 14. Tip Amount VS Week Day
 
 Tips display interesting variations throughout the week, showing a gradual increase from Monday (day 0) to Wednesday (day 2), followed by fluctuations between Wednesday and Friday. Notably, there's a significant surge in tip amounts from Friday to Sunday, indicating a substantial rise towards the end of the week. This trend suggests an escalating pattern of tips as the week advances, with higher tipping tendencies observed over the weekend.
 
 ![image](https://github.com/BhaveshxPurohit/Analyzing-NYC-Green-Taxi-Trips/blob/6a352ec85e810156c9180aa5f22b070a2a065b58/Assests/19.png)
 
+### 15. Corealtion Matrix
+
+The heatmap indicates various correlations between different variables related to taxi trips. For instance, trip distance shows a strong positive correlation with the fare amount (0.84), which suggests that as the distance of the trip increases, the fare tends to increase as well. Moreover, there's a significant negative correlation between the extra charges and the MTA tax (-0.36), possibly indicating that extra fees are less likely to be charged when the MTA tax is applied. Correlations close to 1 or -1 suggest a strong relationship, while those near 0 indicate little to no linear relationship between the variables.
+
+![image](https://github.com/BhaveshxPurohit/Analyzing-NYC-Green-Taxi-Trips/blob/b47c2a13555c71a67fc585100eae372c46fcd897/Assests/20.png)
 
 ## Splitting Data & Dimension Reduction
 
@@ -180,6 +190,3 @@ Here's a summary of the regression models implemented to predict fare amounts:
 - **Lasso Regression**: Achieved a remarkably low Mean Squared Error of 0.1036 and an impressive R-squared value of 0.9992, indicating a highly accurate fit to the data.
 
 Among the four models tested, Lasso Regression emerged as the top performer, boasting an exceptionally low Mean Squared Error and impressive R-squared value, indicative of its highly accurate fit to the data. Following closely behind, KNN Regression demonstrated a respectable balance between simplicity and accuracy. Meanwhile, Decision Tree Regression exhibited a reasonable fit to the data. Finally, Linear Regression, while performing adequately, showed a slightly higher MSE and R-squared value, suggesting a moderate level of accuracy with its linear model. Overall, Lasso Regression proved to be the most promising model for predicting the target variable, followed by KNN Regression, Decision Tree Regression, and Linear Regression, in respective order of performance.
-
-
-
